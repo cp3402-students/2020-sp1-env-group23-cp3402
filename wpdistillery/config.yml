@@ -60,14 +60,13 @@ wpsettings:
 
 # install a custom theme via url, rename it and remove the default themes
 theme:
-  name: UnderStrap
-  url: "https://github.com/understrap/understrap/archive/master.zip"
+  name: WPSeed
+  url: "https://github.com/flurinduerst/wpseed/archive/master.zip"
   rename: ""
   remove:
     - twentyfifteen
     - twentysixteen
     - twentyseventeen
-
 
 # PLUGINS
 #################################################################
@@ -98,7 +97,7 @@ plugins_inactive:
 setup:
   wp: true
   settings: true
-  theme: true
+  theme: false
   plugins: true
   cleanup: true
   # adjust what data you want to be deleted within the cleanup (requires `cleanup: true`)
