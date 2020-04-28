@@ -60,13 +60,13 @@ wpsettings:
 
 # install a custom theme via url, rename it and remove the default themes
 theme:
-  name: WPSeed
-  url: "https://github.com/flurinduerst/wpseed/archive/master.zip"
+  name: 2020-sp1-project-group23-cp3402
+  url: "https://github.com/cp3402-students/2020-sp1-project-group23-cp3402/archive/master.zip"
   rename: ""
-  remove:
-    - twentyfifteen
-    - twentysixteen
-    - twentyseventeen
+  #remove:
+  #  - twentyfifteen
+  #  - twentysixteen
+  #  - twentyseventeen
 
 # PLUGINS
 #################################################################
@@ -97,7 +97,7 @@ plugins_inactive:
 setup:
   wp: true
   settings: true
-  theme: false
+  theme: true
   plugins: true
   cleanup: true
   # adjust what data you want to be deleted within the cleanup (requires `cleanup: true`)
