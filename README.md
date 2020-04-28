@@ -19,6 +19,15 @@ vagrant vbguest
 
 3. Done! You can now access your project at the local URL (http://jazzclubtownsville.local) or (http://192.168.33.10/)
 
+## Alternate Startup
+
+> Ensure You Have Nodejs and npm installed
+
+> These Will Run: Vagrant Up, NPM Install, Gulp Watch
+
+- On Linux Run: deployment.sh
+
+- On Windows Run: deployment.bat
 
 ## Specs of Vagrant Box
 ### Scotch Box 3.5:
