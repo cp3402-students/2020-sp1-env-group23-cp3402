@@ -1,6 +1,13 @@
 @ECHO OFF
 SET batch_path=%~dp0
 SET theme_name=2020-sp1-project-group23-cp3402
+echo Getting Theme...
+IF NOT EXIST "%batch_path%public\wp-content\themes\%theme_name%" (
+	IF NOT EXIST "%batch_path%public\wp-content\themes" mkdir "%batch_path%public\wp-content\themes"
+	git clone https://github.com/cp3402-students/2020-sp1-project-group23-cp3402.git "%batch_path%public\wp-content\themes\%theme_name%"
+	mklink /J "%batch_path%%theme_name%" "%batch_path%public\wp-content\themes\%theme_name%"
+)
+cls
 echo Starting Vagrant Environment...
 vagrant up
 cls

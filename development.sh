@@ -3,7 +3,15 @@
 SCRIPT=`realpath $0`
 SCRIPTPATH=`dirname $SCRIPT`
 THEME_NAME=2020-sp1-project-group23-cp3402
-THEME_LOCATION="./public/wp-content/themes/$THEME_NAME"
+THEME_LOCATION="$SCRIPTPATH/public/wp-content/themes/$THEME_NAME"
+printf "Getting Theme...\n"
+if [[ ! -d "$THEME_LOCATION" ]]; then
+	mkdir -p "$THEME_LOCATION"
+	git clone https://github.com/cp3402-students/2020-sp1-project-group23-cp3402.git "$THEME_LOCATION"
+	ln -s "$THEME_LOCATION" "$SCRIPTPATH/$THEME_NAME"
+fi
+clear
+printf "Starting Vagrant Environment...\n"
 vagrant up
 clear
 if [[ -f "$THEME_LOCATION/package.json" ]]; then 
